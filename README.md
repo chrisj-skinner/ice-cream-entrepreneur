@@ -2,6 +2,8 @@
 
 Educational game teaching kids basic business concepts by running an ice cream stand. Learn about budget, profit, and matching supply with demand!
 
+**[🎮 Play the Demo](https://chrisj-skinner.github.io/ice-cream-entrepreneur/)**
+
 ## About
 
 An interactive educational game designed for children ages 6-10 to learn foundational business concepts. Players manage an ice cream stand over 2 days, making purchasing decisions based on weather forecasts and visitor numbers, then seeing the results of their choices.
@@ -49,6 +51,22 @@ npm run build
 ```
 
 Production build outputs to `dist/` directory.
+
+## Deploy to GitHub Pages
+
+The game is hosted on GitHub Pages. To deploy updates:
+
+```bash
+# Build with correct base path
+npm run deploy
+
+# Commit and push the dist folder
+git add dist -f
+git commit -m "Update production build"
+git subtree push --prefix dist origin gh-pages
+```
+
+The live site will update at https://chrisj-skinner.github.io/ice-cream-entrepreneur/ within 1-2 minutes.
 
 ## Project Structure
 
