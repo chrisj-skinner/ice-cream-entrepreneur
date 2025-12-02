@@ -52,22 +52,6 @@ npm run build
 
 Production build outputs to `dist/` directory.
 
-## Deploy to GitHub Pages
-
-The game is hosted on GitHub Pages. To deploy updates:
-
-```bash
-# Build with correct base path
-npm run deploy
-
-# Commit and push the dist folder
-git add dist -f
-git commit -m "Update production build"
-git subtree push --prefix dist origin gh-pages
-```
-
-The live site will update at https://chrisj-skinner.github.io/ice-cream-entrepreneur/ within 1-2 minutes.
-
 ## Project Structure
 
 ```
