@@ -43,10 +43,14 @@ Each level follows the same four‑step flow, but the variables change gradually
 
 ### Step 1 – Pre‑Level Info (Simplified)
 
+**Core Skill: Gathering Information** – Checking the facts before spending money
+
 1. **Pre‑Booked Visitors** – a fixed number is given (e.g., "50 visitors are confirmed").
 2. **Weather Forecast** – tells the player whether the day will be _Hot & Sunny_ (100% buyers) or _Cloudy_ (50% buyers).
 
 ### Step 2 – Buying Ice Cream
+
+**Core Skill: Spending Wisely** – Buying the right amount within your budget
 
 - The player knows:
   - Their budget
@@ -60,6 +64,8 @@ _Decision outcomes_
 
 ### Step 3 – Event Day Simulation
 
+**Core Skill: Making Money** – Selling products to earn revenue
+
 Sales are calculated based on:
 
 - Number of pre‑booked visitors
@@ -69,6 +75,8 @@ Sales are calculated based on:
 The simulation is short, deterministic, and satisfying.
 
 ### Step 4 – End‑of‑Day Summary
+
+**Core Skill: Tracking Profit** – Learning if you made or lost money and understanding financial terms (words)
 
 | Metric            | Displayed |
 | ----------------- | --------- |
