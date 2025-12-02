@@ -3,6 +3,10 @@ import { formatWeatherRecap } from '../constants/weather';
 import { generateDayTip } from '../utils/tipGenerator';
 import { addValueRow, createButton, drawDivider } from '../utils/ui';
 
+/**
+ * Scene to display the summary of a day's performance.
+ * Shows key metrics, profit/loss, and learning tips.
+ */
 export default class SummaryScene extends Phaser.Scene {
   constructor() {
     super({ key: 'SummaryScene' });
@@ -92,8 +96,6 @@ export default class SummaryScene extends Phaser.Scene {
       currentY += 40;
     }
 
-    // currentY += 20;
-
     // Finances
     drawDivider(this, currentY, 700);
     currentY += 40;
@@ -179,6 +181,4 @@ export default class SummaryScene extends Phaser.Scene {
       );
     }
   }
-
-  // Removed legacy helper methods (addSummaryLine, generateTip) in favor of shared UI helpers and centralized tip logic.
 }

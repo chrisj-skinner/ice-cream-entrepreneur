@@ -1,5 +1,10 @@
 import Phaser from 'phaser';
 
+/**
+ * Scene to introduce the event day with weather and stand info.
+ * Simulates the selling phase and transitions to the summary.
+ * Displays animations and messages during the simulation.
+ */
 export default class EventDayScene extends Phaser.Scene {
   constructor() {
     super({ key: 'EventDayScene' });

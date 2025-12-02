@@ -12,7 +12,7 @@ const config = {
   width: 1024,
   height: 768,
   parent: 'app',
-  backgroundColor: '#87CEEB', // Sky blue
+  backgroundColor: '#87CEEB',
   scene: [
     LandingScene,
     PreLevelScene,

@@ -1,5 +1,10 @@
 import Phaser from 'phaser';
 
+/**
+ * Scene for shopping phase where players buy ice cream stock.
+ * Players can select quantity, see cost, and confirm purchase.
+ * Updates game data with purchased stock and budget.
+ */
 export default class ShoppingScene extends Phaser.Scene {
   constructor() {
     super({ key: 'ShoppingScene' });

@@ -1,4 +1,8 @@
-// Game data manager
+/**
+ * Class to manage game data and logic for the ice cream stand game.
+ * Tracks levels, budget, stock, sales, revenue, profit, and daily results.
+ * Provides methods to purchase stock and simulate a day's sales.
+ */
 export default class GameData {
   constructor() {
     this.currentLevel = 1;

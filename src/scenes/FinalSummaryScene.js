@@ -7,6 +7,11 @@ import {
   drawDivider,
 } from '../utils/ui';
 
+/**
+ * Scene to display the final summary after all days are completed.
+ * Shows overall performance, total profit, and final budget.
+ * Provides tips based on overall results.
+ */
 export default class FinalSummaryScene extends Phaser.Scene {
   constructor() {
     super({ key: 'FinalSummaryScene' });

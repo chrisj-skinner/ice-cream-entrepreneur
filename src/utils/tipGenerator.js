@@ -1,8 +1,6 @@
 // Utility functions for game tips and analysis
 
 export function generateDayTip(dayData) {
-  const efficiency = dayData.sold / dayData.stockPurchased;
-
   // Priority 1: Critical issues
   if (dayData.missedSales > 5) {
     return `💡 Day ${dayData.day}: You ran out of stock! ${dayData.missedSales} customers wanted ice cream but you didn't have enough.`;
@@ -40,15 +38,12 @@ export function generateDayTip(dayData) {
 }
 
 export function generateOverallTip(totalProfit, dayResults) {
-  const totalMissedProfit = dayResults.reduce(
-    (sum, day) => sum + day.missedProfit,
-    0
-  );
   const totalMissedSales = dayResults.reduce(
     (sum, day) => sum + day.missedSales,
     0
   );
 
+  // Tips based on overall performance
   if (totalMissedSales > 10) {
     return `💡 You missed ${totalMissedSales} total sales across all days! Consider buying more stock next time.`;
   } else if (totalProfit > 40) {

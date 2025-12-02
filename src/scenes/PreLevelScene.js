@@ -1,6 +1,10 @@
 import Phaser from 'phaser';
 import GameData from '../GameData';
 
+/**
+ * Scene to introduce the level/day with weather and visitor info.
+ * Displays budget and tips for the upcoming shopping phase.
+ */
 export default class PreLevelScene extends Phaser.Scene {
   constructor() {
     super({ key: 'PreLevelScene' });

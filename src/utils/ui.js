@@ -1,5 +1,6 @@
 // Shared UI helper functions
 
+// for creating buttons
 export function createButton(
   scene,
   x,
@@ -33,6 +34,7 @@ export function createButton(
   return btn;
 }
 
+// for creating a panel background
 export function createPanel(
   scene,
   x,
@@ -51,6 +53,7 @@ export function createPanel(
   return panel;
 }
 
+// for adding a row with left and right aligned text
 export function addValueRow(
   scene,
   y,
@@ -86,6 +89,7 @@ export function addValueRow(
     .setOrigin(1, 0.5);
 }
 
+// for drawing a horizontal divider line
 export function drawDivider(
   scene,
   y,
@@ -97,10 +101,11 @@ export function drawDivider(
   const { width: sceneW } = scene.cameras.main;
   const half = width / 2;
   return scene.add
-    .line(0, 0, sceneW / 2 - half, y, sceneW / 2 + half, y, color, alpha)
+    .line(0, 0, sceneW / 2, y, sceneW / 2 + half, y, color, alpha)
     .setLineWidth(lineWidth);
 }
 
+// for adding centered text
 export function addCenteredText(scene, y, text, style = {}) {
   const { width } = scene.cameras.main;
   return scene.add.text(width / 2, y, text, style).setOrigin(0.5);

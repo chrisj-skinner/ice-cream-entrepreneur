@@ -2,6 +2,11 @@ import Phaser from 'phaser';
 import GameData from '../GameData';
 import { createButton, createPanel } from '../utils/ui';
 
+/**
+ * Landing scene introducing the game and key vocabulary.
+ * Sets up initial game data and starts the first level.
+ * Provides instructions and definitions for players.
+ */
 export default class LandingScene extends Phaser.Scene {
   constructor() {
     super({ key: 'LandingScene' });
