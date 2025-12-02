@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { WEATHER_ICONS } from '../constants/weather';
 
 /**
  * Scene to introduce the event day with weather and stand info.
@@ -28,13 +29,8 @@ export default class EventDayScene extends Phaser.Scene {
       .setOrigin(0.5);
 
     // Weather display
-    const weatherIcons = {
-      sunny: '☀️',
-      cloudy: '☁️',
-      rainy: '🌧️',
-    };
     this.add
-      .text(width / 2, 140, weatherIcons[this.levelData.weather], {
+      .text(width / 2, 140, WEATHER_ICONS[this.levelData.weather], {
         fontSize: '60px',
       })
       .setOrigin(0.5);

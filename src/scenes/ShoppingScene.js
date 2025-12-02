@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-
+import { formatWeatherRecap } from '../constants/weather';
 /**
  * Scene for shopping phase where players buy ice cream stock.
  * Players can select quantity, see cost, and confirm purchase.
@@ -28,9 +28,19 @@ export default class ShoppingScene extends Phaser.Scene {
       })
       .setOrigin(0.5);
 
+    // Weather recap
+    const recapY = 100;
+    this.add
+      .text(width / 2, recapY, formatWeatherRecap(this.levelData), {
+        fontSize: '20px',
+        color: '#555',
+        fontStyle: 'italic',
+      })
+      .setOrigin(0.5);
+
     // Budget display
     this.budgetText = this.add
-      .text(width / 2, 130, `Budget: $${this.gameData.budget}`, {
+      .text(width / 2, 150, `Budget: £${this.gameData.budget}`, {
         fontSize: '32px',
         color: '#228B22',
         fontStyle: 'bold',
@@ -43,13 +53,13 @@ export default class ShoppingScene extends Phaser.Scene {
       .rectangle(width / 2, infoY + 40, 600, 80, 0xfff8dc, 0.9)
       .setStrokeStyle(3, 0x333);
     this.add
-      .text(width / 2, infoY + 20, '🍦 Ice Cream: $1 each', {
+      .text(width / 2, infoY + 20, '🍦 Ice Cream: £1 each', {
         fontSize: '24px',
         color: '#333',
       })
       .setOrigin(0.5);
     this.add
-      .text(width / 2, infoY + 55, 'You sell for: $2 each', {
+      .text(width / 2, infoY + 55, 'You sell for: £2 each', {
         fontSize: '20px',
         color: '#666',
       })
@@ -140,7 +150,7 @@ export default class ShoppingScene extends Phaser.Scene {
 
     // Cost display
     this.costText = this.add
-      .text(width / 2, selectorY + 160, 'Cost: $0', {
+      .text(width / 2, selectorY + 160, 'Cost: £0', {
         fontSize: '28px',
         color: '#333',
       })
@@ -201,7 +211,7 @@ export default class ShoppingScene extends Phaser.Scene {
   updateDisplay() {
     this.quantityText.setText(this.quantity.toString());
     const cost = this.quantity * this.gameData.iceCreamCost;
-    this.costText.setText(`Cost: $${cost}`);
+    this.costText.setText(`Cost: £${cost}`);
   }
 
   purchase() {

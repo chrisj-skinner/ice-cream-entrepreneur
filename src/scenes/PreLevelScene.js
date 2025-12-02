@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import GameData from '../GameData';
+import { WEATHER_ICONS } from '../constants/weather';
 
 /**
  * Scene to introduce the level/day with weather and visitor info.
@@ -60,13 +61,8 @@ export default class PreLevelScene extends Phaser.Scene {
     box.setStrokeStyle(4, 0x333333);
 
     // Weather icon
-    const weatherIcons = {
-      sunny: '☀️',
-      cloudy: '☁️',
-      rainy: '🌧️',
-    };
     this.add
-      .text(width / 2, boxY, weatherIcons[this.levelData.weather], {
+      .text(width / 2, boxY, WEATHER_ICONS[this.levelData.weather], {
         fontSize: '80px',
       })
       .setOrigin(0.5);
@@ -95,7 +91,7 @@ export default class PreLevelScene extends Phaser.Scene {
 
     // Budget info
     this.add
-      .text(width / 2, boxY + 180, `Your Budget: $${this.gameData.budget}`, {
+      .text(width / 2, boxY + 180, `Your Budget: £${this.gameData.budget}`, {
         fontSize: '28px',
         color: '#228B22',
         fontStyle: 'bold',

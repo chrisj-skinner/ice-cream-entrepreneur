@@ -47,7 +47,7 @@ export default class FinalSummaryScene extends Phaser.Scene {
     this.gameData.dayResults.forEach((dayResult) => {
       const dayLabel = `Day ${dayResult.day} (${dayResult.weather}):`;
       const profitColor = dayResult.profit >= 0 ? '#228B22' : '#FF0000';
-      addValueRow(this, currentY, dayLabel, `$${dayResult.profit}`, {
+      addValueRow(this, currentY, dayLabel, `£${dayResult.profit}`, {
         fontSize: '24px',
         rightStyle: { color: profitColor },
       });
@@ -59,7 +59,7 @@ export default class FinalSummaryScene extends Phaser.Scene {
 
     const totalProfit = this.gameData.getTotalProfit();
     const totalColor = totalProfit >= 0 ? '#228B22' : '#FF0000';
-    addValueRow(this, currentY, 'Total Profit:', `$${totalProfit}`, {
+    addValueRow(this, currentY, 'Total Profit:', `£${totalProfit}`, {
       fontSize: '30px',
       rightStyle: { color: totalColor },
     });
@@ -68,7 +68,7 @@ export default class FinalSummaryScene extends Phaser.Scene {
     const finalBudget = this.gameData.budget;
     const budgetColor =
       finalBudget >= 50 ? '#228B22' : finalBudget > 0 ? '#FF9800' : '#FF0000';
-    addValueRow(this, currentY, 'Final Budget:', `$${finalBudget}`, {
+    addValueRow(this, currentY, 'Final Budget:', `£${finalBudget}`, {
       fontSize: '30px',
       rightStyle: { color: budgetColor },
     });

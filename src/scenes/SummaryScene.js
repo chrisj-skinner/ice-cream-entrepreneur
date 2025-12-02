@@ -100,13 +100,13 @@ export default class SummaryScene extends Phaser.Scene {
     drawDivider(this, currentY, 700);
     currentY += 40;
 
-    addValueRow(this, currentY, 'Revenue:', `$${this.gameData.revenue}`, {
+    addValueRow(this, currentY, 'Revenue:', `£${this.gameData.revenue}`, {
       rightStyle: { color: '#228B22' },
     });
     currentY += 40;
 
     const costSpent = this.gameData.stockPurchased * this.gameData.iceCreamCost;
-    addValueRow(this, currentY, 'Cost:', `$${costSpent}`, {
+    addValueRow(this, currentY, 'Cost:', `£${costSpent}`, {
       rightStyle: { color: '#666' },
     });
     currentY += 50;
@@ -118,7 +118,7 @@ export default class SummaryScene extends Phaser.Scene {
       this,
       currentY,
       profitLabel,
-      `$${Math.abs(this.gameData.profit)}`,
+      `£${Math.abs(this.gameData.profit)}`,
       { fontSize: '32px', rightStyle: { color: profitColor } }
     );
     currentY += 50;
@@ -129,7 +129,7 @@ export default class SummaryScene extends Phaser.Scene {
         .text(
           width / 2,
           currentY,
-          `(Potential Profit: $${this.gameData.profit + missedProfit})`,
+          `(Potential Profit: £${this.gameData.profit + missedProfit})`,
           {
             fontSize: '22px',
             color: '#FF6347',

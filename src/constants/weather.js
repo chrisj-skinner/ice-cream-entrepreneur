@@ -2,7 +2,6 @@
 export const WEATHER_ICONS = {
   sunny: '☀️',
   cloudy: '☁️',
-  rainy: '🌧️',
 };
 
 export function formatWeatherRecap(levelData) {
