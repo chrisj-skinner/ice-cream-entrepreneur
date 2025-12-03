@@ -55,6 +55,7 @@ export default class LandingScene extends Phaser.Scene {
       .setOrigin(0.5);
 
     // Vocabulary section
+    createPanel(this, width / 2, 480, 900, 420, { alpha: 0.97 });
     this.add
       .text(width / 2, 300, 'Key Words (tip, write these down!)', {
         fontSize: '26px',
