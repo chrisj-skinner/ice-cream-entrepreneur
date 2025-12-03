@@ -112,13 +112,6 @@ export default class PreLevelScene extends Phaser.Scene {
       tipText = 'Tip: Not everyone will buy ice cream!';
       const percent = Math.floor(this.levelData.buyerPercent * 100);
       weatherExplanation = `${this.levelData.weatherText} means only ${percent}% will buy ice creams`;
-
-      // Calculate example: if 4 people, only 2 will buy
-      const exampleVisitors = 4;
-      const exampleBuyers = Math.floor(
-        exampleVisitors * this.levelData.buyerPercent
-      );
-      exampleText = `(If ${exampleVisitors} people are on the list, only ${exampleBuyers} will want ice creams.\nMake sure you don't purchase too many!)`;
     }
 
     this.add
