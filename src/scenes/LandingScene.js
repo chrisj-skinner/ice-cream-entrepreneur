@@ -38,27 +38,29 @@ export default class LandingScene extends Phaser.Scene {
     // Intro panel
     createPanel(this, width / 2, 200, 900, 140, { alpha: 0.97 });
     const introText = [
-      'You will run an ice cream stand for 2 days.',
-      'Each day you see the WEATHER and how many VISITORS signed up.',
-      'Decide how many ice creams to BUY. Try not to buy too few or too many!',
-      'Earn MONEY by selling. Learn how BUDGET and PROFIT work.',
+      '• You will run an ice cream stand for 2 days.',
+      '• Each day you see the WEATHER and how many VISITORS signed up.',
+      '• Decide how many ice creams to BUY.',
+      '• Try not to buy too few or too many!',
+      '• Earn MONEY by selling. Learn how BUDGET and PROFIT work.',
     ];
     this.add
       .text(width / 2, 200, introText.join('\n'), {
-        fontSize: '22px',
+        fontSize: '20px',
         color: '#333',
-        align: 'center',
-        wordWrap: { width: 820 },
+        align: 'left',
+        lineSpacing: 3,
+        wordWrap: { width: 840 },
       })
       .setOrigin(0.5);
 
-    // Vocabulary panel
-    createPanel(this, width / 2, 480, 900, 420, { alpha: 0.97 });
+    // Vocabulary section
     this.add
-      .text(width / 2, 300, 'Key Words (Simple Meanings)', {
-        fontSize: '30px',
+      .text(width / 2, 300, 'Key Words (tip, write these down!)', {
+        fontSize: '26px',
         color: '#333',
         fontStyle: 'bold',
+        align: 'left',
       })
       .setOrigin(0.5);
 
@@ -79,14 +81,14 @@ export default class LandingScene extends Phaser.Scene {
     vocab.forEach(([word, def]) => {
       this.add
         .text(width / 2 - 400, startY, word + ':', {
-          fontSize: '22px',
+          fontSize: '20px',
           color: '#000',
           fontStyle: 'bold',
         })
         .setOrigin(0, 0.5);
       this.add
         .text(width / 2 - 220, startY, def, {
-          fontSize: '22px',
+          fontSize: '20px',
           color: '#333',
           wordWrap: { width: 650 },
         })
